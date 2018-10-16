@@ -7,30 +7,31 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tomasiser/vim-code-dark'
-Plugin 'vim-airline/vim-airline'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'fatih/vim-go'
-Plugin 'elmcast/elm-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'universal-ctags/ctags'
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
-Plugin 'majutsushi/tagbar'
 Plugin 'elixir-editors/vim-elixir'
-Plugin 'tpope/vim-sensible'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'elmcast/elm-vim'
+Plugin 'fatih/vim-go'
+Plugin 'fishcakez/vim-dialyzer'
 Plugin 'fsharp/vim-fsharp'
-Plugin 'w0rp/ale'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'godlygeek/tabular'
-Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'kburdett/vim-nuuid'
+Plugin 'majutsushi/tagbar'
 Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'scrooloose/nerdtree'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-dispatch'
-Plugin 'fishcakez/vim-dialyzer'
+Plugin 'tpope/vim-sensible'
+Plugin 'universal-ctags/ctags'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -114,13 +115,11 @@ nnoremap <C-H> <C-W><C-H>
 set list " Display unprintable characters f12 - switches
 set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
 
-" Open tag bar with F8
+" Configure function keys
+nmap <F6> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " NERDTree
-"autocmd vimenter * NERDTree
-map <C-n> :NERDTreeToggle<CR>
-"autocmd vimenter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 :let g:NERDTreeWinSize=50
 
