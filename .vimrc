@@ -57,6 +57,8 @@ let g:airline_theme = 'codedark'
 :set ttymouse=xterm2
 :set hlsearch
 :set cursorline
+:set foldmethod=indent
+:set nofoldenable " Disable folding when opening files
 :let g:easytags_on_cursorhold=0
 :let g:easytags_auto_update=0
 :let g:ale_fix_on_save = 1
