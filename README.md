@@ -26,6 +26,8 @@ This file is intended to help in setting up a new Linux development environment 
   * `sudo npm install --unsafe-perm=true --allow-root -g elm-oracle`
   * `sudo npm install --unsafe-perm=true --allow-root -g elm-test`
   * `sudo npm install --unsafe-perm=true --allow-root -g elm-live`
+  * `sudo npm install --unsafe-perm=true --allow-root -g elm-oracle`
+  * `sudo npm install --unsafe-perm=true --allow-root -g elm-css`
 * Clone Elixir Language Server
   * `cd ~/Sandbox`
   * `git clone https://github.com/JakeBecker/elixir-ls.git`
