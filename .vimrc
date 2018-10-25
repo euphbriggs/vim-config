@@ -15,6 +15,7 @@ Plugin 'fsharp/vim-fsharp'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'godlygeek/tabular'
 Plugin 'kburdett/vim-nuuid'
+Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
@@ -113,11 +114,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Set CTRL-J to split lines in normal mode
-:noremap <NL> i<CR><ESC>
+" Set CTRL-S to split lines in normal mode
+nnoremap <C-S> i<CR><ESC>
 
 set list " Display unprintable characters f12 - switches
-set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
+set listchars=tab:\ \ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
 
 " Configure function keys
 nmap <F6> :NERDTreeToggle<CR>
