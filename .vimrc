@@ -25,6 +25,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 Plugin 'universal-ctags/ctags'
 Plugin 'vim-airline/vim-airline'
@@ -80,24 +81,12 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_elixir_checker = 1
 let g:elm_syntastic_show_warnings = 1
 
-" Elixir LSP
-augroup elixir_lsp
-      au!
-        au User lsp_setup call lsp#register_server({
-            \ 'name': 'elixir-ls',
-            \ 'cmd': {server_info->[&shell, &shellcmdflag, '~/Sandbox/elixir-ls/lsp/language_server.sh']},
-            \ 'whitelist': ['elixir', 'eelixir'],
-            \ })
-augroup END
-
 let g:ale_fixers = {
             \ '*': ['remove_trailing_lines', 'trim_whitespace'],
             \ 'elixir': ['mix_format'],
             \}
 
-let g:ale_linters = {
-            \ 'elixir': [],
-            \}
+let g:ale_linters = {'elixir': ['elixir', 'elixir-ls', 'dialyxir']}
 
 " Async Complete Keymaps
 inoremap <Nul> <C-n>
@@ -130,6 +119,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
