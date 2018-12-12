@@ -21,12 +21,11 @@ This file is intended to help in setting up a new Linux development environment 
   * `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
   * `sudo apt-get install nodejs`
 * Install Elm
-  * `sudo npm install --unsafe-perm=true --allow-root -g elm@0.18.0`
+  * `sudo npm install --unsafe-perm=true --allow-root -g elm`
   * `sudo npm install --unsafe-perm=true --allow-root -g elm-format`
   * `sudo npm install --unsafe-perm=true --allow-root -g elm-oracle`
   * `sudo npm install --unsafe-perm=true --allow-root -g elm-test`
   * `sudo npm install --unsafe-perm=true --allow-root -g elm-live`
-  * `sudo npm install --unsafe-perm=true --allow-root -g elm-oracle`
   * `sudo npm install --unsafe-perm=true --allow-root -g elm-css`
 * Clone Elixir Language Server
   * `cd ~/Sandbox`
